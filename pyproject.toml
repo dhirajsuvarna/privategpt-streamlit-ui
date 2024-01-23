@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "private-gpt-streamlit-ui"
+version = "0.1.0"
+description = ""
+authors = ["Dhiraj Suvarna"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+llama-index = "^0.9.21"
+streamlit = "^1.29.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
