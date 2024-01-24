@@ -2,6 +2,8 @@
 
 This is a UI build using `streamlit` which provides as an alternative to the default Gradio UI shipped with [PrivateGPT](https://github.com/imartinez/privateGPT)
 
+![Streamlit UI](/assets/privategpt-demo-screenshot.png)
+
 # How to make it work 
 
 ## Install PrivateGPT 
