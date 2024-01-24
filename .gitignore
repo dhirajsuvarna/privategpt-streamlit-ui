@@ -3,3 +3,6 @@
 __pycache__
 .streamlit
 .python-version
+output
+data
+backup

@@ -56,11 +56,25 @@ def stream_chat(iRequestBody):
                             assistant_message_placeholder.markdown(
                                 assistant_response + "▌"
                             )
+                        # get the sources 
+                            sources = json_data["choices"][0]["sources"]
+                            if sources:
+                                source_filenames = set()
+                                for source in sources:
+                                    file_name = source["document"]["doc_metadata"]["file_name"]
+                                    source_filenames.add(file_name)
+
                 assistant_message_placeholder.markdown(assistant_response)
 
                 st.session_state.messages.append(
                     {"role": "assistant", "content": assistant_response}
                 )
+
+                # display sources 
+                if source_filenames:
+                    with st.status("Sources Refered"):
+                        for file_name in source_filenames:
+                            st.markdown(f"📄 {file_name}")       
 
 
 def chunk_reterival(iRequestBody):
